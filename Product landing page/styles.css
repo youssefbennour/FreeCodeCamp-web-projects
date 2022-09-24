@@ -1,0 +1,292 @@
+:root{
+    --button-color: #F1C40F;
+    --bgcolor1: #eee;
+    --bgcolor2: #DDDDDD;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--bgcolor1);
+    scroll-behavior: smooth;
+    font-family: 'Cairo', sans-serif;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* header/navbar style*/
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    z-index: 1;
+    padding: 1rem 7% 1rem  40px;
+    background-color: var(--bgcolor1);
+    text-align: center;
+
+}
+
+#header-img{
+    max-height: 34.14px;
+    min-width: 150px;
+    width: 300px;
+}
+
+#nav-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    width:40%;
+}
+
+a{
+    text-decoration:none;
+    color: #000;
+}
+
+@media only screen and (max-width: 650px){
+    #nav-bar{
+        flex-direction: column;
+        row-gap: 5px;
+        align-items: center;
+    }
+    #header{
+        padding-left: 0;
+        align-items: center;
+    }
+    
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    #header-img{
+        width: 39%;
+    }
+
+    
+}
+
+/* end of heading style */
+
+
+/* main style start */
+
+main{
+    width: 100%;
+    margin: 80px auto 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* end of main styling */
+
+/* form style start */
+#email-subscription{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form input[type="email"]{
+    max-width: 275px;
+    max-height: 29px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin-top:20px;
+    
+}
+
+#form input[type="submit"]{
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    padding: 0 20px;
+    border: none;
+    font-weight: 800;
+    font-size: 16px;
+    background: #F1C40F;
+}
+/* form style end */
+
+@media only screen and (max-width: 650px){
+    main{
+        width: 100%;
+        margin-top: 105px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        margin-top: 130px;
+    }
+}
+
+/* end of form styling */
+
+/* start of features section styling */
+
+#features{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
+
+.items{
+    display: flex;
+    margin: 50px 0;
+}
+
+#features .item-logo{
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: center;
+    color: darkorange;
+    padding: 0 10px;
+}
+
+.item-description{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* end of features section styling */
+
+
+/* start of how it works section's styling*/
+#how-it-works{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#how-it-works iframe{
+    width:80%;
+    height: 400px;
+}
+
+
+/* end of how it works section's styling*/
+
+/* start of pricing section's styling*/
+
+#pricing{
+    width:70%;
+    margin: 50px 0; 
+    text-align:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border{
+    border: 1px solid #000;
+    padding-bottom: 10px;
+    width: 40%;
+    margin-right: 10px;
+    min-width: 120px;
+
+}
+
+.border .item-title{
+    padding: 15px 0;
+    background-color: var(--bgcolor2);
+}
+
+.border .price{
+    font-weight: 900;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+.border .item-description{
+    font-size: 16px;
+    line-height: 2rem;
+    padding-bottom: 20px;
+}
+
+.border input[value="SELECT"]{
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--button-color);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+@media only screen and (max-width: 800px){
+    #pricing{
+        flex-direction: column;
+    }
+
+    .border{
+        width: 300px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    #pricing{
+        width: 100%;
+    }
+    .border{
+        width: 95%;
+    }
+
+    #how-it-works iframe{
+        width: 90%;
+    }
+}
+
+.right-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 20px;
+    text-align: right;
+    background-color: var(--bgcolor2);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 20%;
+    padding-bottom: 5px;
+    float:left;
+}
+/* end of pricing section's styling*/

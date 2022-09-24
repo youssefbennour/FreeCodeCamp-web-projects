@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name<input id="name" type="text" placeholder="Enter your name" required /></label>
+        <label id="email-label">Email<input id="email" type="email" placeholder="Enter your email" required /></label>
+        <label id="number-label">Age (optional)<input type="number" id="number" min="10" max="99" placeholder="Age"/><label>
+        <label>Which Option best describes your current role?<select id="dropdown">
+          <option>Select current role</option>
+			    <option>Student</option>
+			    <option>Full Time Job</option>
+			    <option>Full Time learner</option>
+			    <option>Prefer not to say</option>
+			    <option>Other</option>
+        </select></label>
+      </fieldset>
+      <fieldset>
+		<label id="no-margin"><input type="radio" name="radio" value="radio1"/> Definitely</label>
+		<label id="no-margin"><input type="radio" name="radio" value="radio2"/> Maybe</label>
+		<label id="no-margin"><input type="radio" name="radio" value="radio3"/> Not sure</label>
+      </fieldset>
+	  <fieldset>
+		<label>What is your favorite feature of freeCodeCamp?<select id="dropdown">
+      <option>Select an option</option>
+      <option>Challenges</option>
+      <option>Projects</option>
+      <option>Community</option>
+      <option>Open Source</option>
+    </select></label>
+	  </fieldset>
+    <fieldset>
+      <label>what would you like to se improved</label>
+      <label id="no-margin"><input type="checkbox" value="1"/> Front-end Projects</label>
+      <label id="no-margin"><input type="checkbox" value="2"/> Back-end Projects</label>
+      <label id="no-margin"><input type="checkbox" value="3"/> Data Visualization</label>
+      <label id="no-margin"><input type="checkbox" value="4"/> Challenges</label>
+      <label id="no-margin"><input type="checkbox" value="5"/> Open Source Community</label>
+      <label id="no-margin"><input type="checkbox" value="6"/> Gitter help rooms</label>
+      <label id="no-margin"><input type="checkbox" value="7"/> Videos</label>
+      <label id="no-margin"><input type="checkbox" value="8"/> City Meetups</label>
+      <label id="no-margin"><input type="checkbox" value="9"/> Wiki</label>
+      <label id="no-margin"><input type="checkbox" value="10"/> Forum</label>
+      <label id="no-margin"><input type="checkbox" value="11"/> Additional Courses</label>      
+    </fieldset>
+    <fieldset>
+      Any comments or suggestions?
+      <textarea>
+
+      </textarea>
+    </fieldset>
+    <label>
+      <input type="submit" id="submit" value="Submit"/>
+    </label>
+    </form>
+  </body>
+</html>
+
