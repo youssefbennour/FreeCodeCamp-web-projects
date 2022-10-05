@@ -1,0 +1,298 @@
+:root{
+  --main-color: #BE3144;
+  --secondary-color: #303841;
+  --tertiary-color: #45567d;
+}
+/* Start Global Rules */
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
+}
+
+/* End Global Rules */
+
+/* Start Header */
+
+.header{
+  background-color: var(--main-color);
+  color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.header .container #navbar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px){
+  .header .container #navbar ul{
+    justify-content: center;
+  }
+}
+
+.header .container #navbar ul li:hover{
+  background-color: var(--tertiary-color);
+}
+
+.header .container #navbar ul li{
+  padding: 25px 20px;
+}
+
+.header .container #navbar ul  li a{
+    font-size: 2.2rem;
+
+}
+
+/* End Header */
+
+/* Start Welcome Section */
+
+#welcome-section{
+  background-color: black;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  height: calc(100vh - 75.77px);
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+#welcome-section .info{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 100%;
+  text-align : center;
+}
+
+#welcome-section .info h1{
+  margin : 0;
+  color: white;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+#welcome-section .info p{
+  color: var(--main-color);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* End Welcome Section */
+
+/* Start Portfolio Section */
+
+.portfolio{
+  background-color: var(--tertiary-color) ;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.portfolio .container #profile-link{
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background-color:var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.portfolio .container #profile-link:hover{
+  background-color: var(--main-color);
+}
+
+.portfolio .container #profile-link .fa-chevron-right{
+  transition: all 0.5s;
+}
+
+.portfolio .container #profile-link:hover .fa-chevron-right{
+  transform: translate(5px);
+}
+
+.portfolio .container .portfolio-title{
+  margin: 0;
+  color: white;
+  font-size: 4rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 10px 0;
+  border-bottom: 2px solid white
+}
+
+.portfolio .container #projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 50px 0;
+}
+
+
+.portfolio .container #projects  .project-tile{
+  background-color: var(--secondary-color);
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+
+.portfolio .container #projects .project-tile img{
+  width: 100%;
+  height: calc(100% - 50px);
+  object-fit: cover;
+}
+
+.portfolio .container #projects .project-tile .project-title{
+  font-size: 1.8rem;
+  padding-top: 15px;
+}
+
+.portfolio .container #projects .project-tile .project-title span{
+  color: var(--secondary-color);
+  transition: color 0.7s;
+}
+
+.portfolio .container #projects .project-tile:hover .project-title span{
+  color: ff7f50;
+}
+
+
+/* End Portfolio Section */
+
+/* Start Contact Section */
+
+.contact{
+  background-color: var(--secondary-color);
+  padding:14rem 0;
+  color: white;
+
+}
+
+.contact .container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center
+}
+
+.contact .container .contact-title{
+  font-size: 6rem;
+  margin-bottom: 0;
+
+}
+
+.contact .container .contact-title + p{
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 0.8rem 0 5rem 0;
+}
+
+.contact .container  #social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 980px;
+  width: 100%;
+}
+
+.contact .container  #social-links .profile-link{
+  font-size: 2.2rem;
+  padding : 1rem 2rem;
+  transition: all 0.5s;
+}
+
+.contact .container  #social-links .profile-link:hover{
+  transform: translate(0, 10px);
+}
+
+/* End Contact Section */
+
+
+/* This is a red break line */
+.red-line{
+  margin: 0;
+  height: 0.5rem;
+  background-color: var(--main-color);
+  border: none;
+}
+
+
+/* Start Footer */
+
+#footer{
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+#footer .container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  align-items: center;
+  font-weight: 300;
+  padding: 3rem;
+}
+
+#footer .container p{
+  margin: 0;
+}
+
+
+
+
+
+/* End Footer */
